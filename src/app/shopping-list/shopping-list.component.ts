@@ -16,4 +16,7 @@ export class ShoppingListComponent {
   constructor(){
 
   }
+  appendIngredientToList(item : Ingredient){
+    this.ingredients.push(item);
+  }
 }

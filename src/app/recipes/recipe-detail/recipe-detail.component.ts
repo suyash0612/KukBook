@@ -6,13 +6,10 @@ import { Recipe } from '../recipe.model';
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.css']
 })
-export class RecipeDetailComponent implements OnChanges{
+export class RecipeDetailComponent{
   @Input()
-  getRecipe : 
-  Recipe;
+  getRecipe : Recipe;
 
-  ngOnChanges(): void {
-    alert('change detected')
-  }
+  toggleManageDropdown(){}
   
 }

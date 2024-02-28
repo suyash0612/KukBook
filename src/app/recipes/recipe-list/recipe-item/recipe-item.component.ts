@@ -12,8 +12,9 @@ export class RecipeItemComponent {
 
   @Output() recipeEmitter = new EventEmitter<void>();
 
-  onRecipeClick(){
-    alert("recipe item emit")
+  onRecipeClick(event : MouseEvent){
+    event.preventDefault();
+    // alert("recipe item emit")
     this.recipeEmitter.emit();
   }
 }
