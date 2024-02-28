@@ -12,7 +12,15 @@ export class RecipesComponent {
   selectedRecipe : Recipe;
   // event : any;
 
-  constructor(){
+  constructor(private recipeService : RecipeService){
+  }
+
+  ngOnInit(){
+    this.recipeService.recipeEmitByService.subscribe(
+      (recipe : Recipe) => {
+        this.selectedRecipe = recipe;
+      }
+    );
   }
 
   getRecipe(recipe : any){
